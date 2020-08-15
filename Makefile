@@ -1,4 +1,4 @@
 include .env
 
 test:
-	go test -v arpgenerator_test.go arpgenerator.go
+	go test -v arp_generator_test.go arp_generator.go
