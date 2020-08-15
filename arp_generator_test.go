@@ -33,12 +33,12 @@ func TestGenerateArpPackage(t *testing.T) {
 	dstIp := net.ParseIP(dstIpAddrStr).To4()
 
 	// create arp package
-	arpSender := NewArpSender()
-	arpSender.SetIface(iface)
-	arpSender.SetSrcIp(srcIp)
-	arpSender.SetDstIp(dstIp)
-	//arpSender.SetDstIpV4FromStr(dstIpAddrStr)
-	arpPackage := arpSender.GenerateArpPackage()
+	arpGenerator := NewArpGenerator()
+	arpGenerator.SetIface(iface)
+	arpGenerator.SetSrcIp(srcIp)
+	arpGenerator.SetDstIp(dstIp)
+	//arpGenerator.SetDstIpV4FromStr(dstIpAddrStr)
+	arpPackage := arpGenerator.GenerateArpPackage()
 
 	// check
 	t.Log(arpPackage)

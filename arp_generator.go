@@ -76,6 +76,6 @@ func (sender *ArpGenerator) GenerateArpPackage() []byte {
 }
 
 // Конструктор
-func NewArpSender() *ArpGenerator {
+func NewArpGenerator() *ArpGenerator {
 	return new(ArpGenerator)
 }
